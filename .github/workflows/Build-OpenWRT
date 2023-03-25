@@ -1,1 +1,9 @@
-123
+#=================================================
+# OpenWRT-CI Workflows for Build OpenWRT firmware
+# 
+#=================================================
+
+name: Build_OpenWRT
+
+on:
+  workflow_dispatch:
