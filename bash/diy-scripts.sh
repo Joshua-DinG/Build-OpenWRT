@@ -2,14 +2,14 @@
 
 # Uncomment a feed source
 ##sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-sed -i '1i src-git haibo https://github.com/haiibo/openwrt-packages' feeds.conf.default
+#sed -i '1i src-git haibo https://github.com/haiibo/openwrt-packages' feeds.conf.default
 
 # LINUX_VERSION
 #sed -i 's/IMG_PREFIX:=/IMG_PREFIX:=$(LINUX_VERSION)-/g' include/image.mk
 #
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
 sed -i 's/192.168.1.1/192.168.2.88/g' package/base-files/files/bin/config_generate
-sed -i '5i uci set system.@system[0].hostname=DinG' package/lean/default-settings/files/zzz-default-settings
+#sed -i '5i uci set system.@system[0].hostname=DinG' package/lean/default-settings/files/zzz-default-settings
 # 日期
 #sed -i 's/os.date(/&"%Y-%m-%d %H:%M:%S"/' package/lean/autocore/files/x86/index.htm
 # 关闭串口跑码
@@ -18,7 +18,7 @@ sed -i '5i uci set system.@system[0].hostname=DinG' package/lean/default-setting
 #sed -i "s/Year/$(TZ=':Asia/Shanghai' date '+%Y')/g" package/base-files/files/etc/banner
 #sed -i '/logins./a\                                          by Jason' package/base-files/files/etc/profile
 # Modify default passwd
-#sed -i '/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./ d' package/lean/default-settings/files/zzz-default-settings
+sed -i '/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./ d' package/lean/default-settings/files/zzz-default-settings
 # ID
 #sed -i "s/DISTRIB_REVISION='R.*.*.[0-9]/& Compiled by Jason/" package/lean/default-settings/files/zzz-default-settings
 # 添加新主题  
