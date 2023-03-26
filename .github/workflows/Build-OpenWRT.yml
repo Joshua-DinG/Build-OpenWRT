@@ -61,7 +61,7 @@ jobs:
         git clone --depth=1 --single-branch $REPO_URL
         cd ./lede 
         sed -i "1i src-git haibo $MY_URL" $FEEDS_CONF
-        sed -i '5i uci set system.@system[0].hostname=$HOST_NAME' package/lean/default-settings/files/zzz-default-settings
+        sed -i "5i uci set system.@system[0].hostname=$HOST_NAME" package/lean/default-settings/files/zzz-default-settings
         cat feeds.conf.default
         
     - name: Update Feeds01
@@ -96,10 +96,10 @@ jobs:
     - name: Release Firmware
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: $DEVICE_NAME_Firmware_${{env.BUILD_DATE}}
+        tag_name: "$DEVICE_NAME_Firmware_${{env.BUILD_DATE}}"
         files: ./lede/bin/targets/*/*/*.*
         body: |
-          OpenWrt $DEVICE_NAME 固件 ${{ env.DEVICE_NAME }}
+          "OpenWrt $DEVICE_NAME 固件 ${{ env.DEVICE_NAME }}"
           * 固件信息
           Default IP: 192.168.2.88
           Default username: root
