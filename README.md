@@ -5,18 +5,7 @@
 
 
 
-<style>
-   table {
-    table-layout: fixed;
-    width: 100%;
-    white-space: nowrap;
-  }
-  td, th {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
- </style>
+<div style="overflow-x:auto;">
 
     <table>
 	<caption><b>集成插件</b></caption>
