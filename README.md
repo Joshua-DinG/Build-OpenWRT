@@ -5,11 +5,7 @@
 
 
 
-<div style="width: 500%; height: 20%; text-align: center;">
-  <style>
-    table {
-      font-size: 14px;
-    }
+<div style="width: 500%; height: 20%; text-align: center; font-size: 14px;">
     <table>
 	<caption><b>集成插件</b></caption>
 	<tr>
