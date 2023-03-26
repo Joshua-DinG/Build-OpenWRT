@@ -7,7 +7,7 @@
 
 
 <table>
-	<caption><b>集成插件</b></caption>
+  <caption><b>集成插件</b></caption>
 	<tr>
 		<th rowspan="">插件名称</th>
 		<th rowspan="">插件说明</th>
@@ -42,9 +42,8 @@
 		<td>————</td>
 		<td>luci-app-vssr</td>  
 		<td>Hello World 科学上网插件</td>
-</tr>
+ </tr>
 </table>
-
 
 
 
