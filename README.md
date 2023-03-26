@@ -5,7 +5,7 @@
 
 
 
-<div style="div align=center;">
+
     <table width="100%" height="20%">
 	<caption><b>集成插件</b></caption>
 	<tr>
