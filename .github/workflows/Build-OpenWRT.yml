@@ -16,9 +16,8 @@ env:
   REPO_BRANCH: master
   HOST_NAME: DinG
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: config/X86.config
-  DIY_P1_SH: bash/diy_script01.sh
-  DIY_P2_SH: bash/diy_script02.sh
+  CONFIG_FILE: firmware/Generic
+  DIY_P1_SH: bash/diy-scripts.sh
   COMMIT_LOG_NUM: 1
   DEVICE_NAME: X86
   UPLOAD_BIN_DIR: false
@@ -69,7 +68,7 @@ jobs:
 
     - name: Update Plugins
       run: |
-        chmod +x $DIY_P2_SH; cd ./lede; $GITHUB_WORKSPACE/$DIY_P2_SH
+        chmod +x $DIY_P1_SH; cd ./lede; $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Custom Settings
       run: |
