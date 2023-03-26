@@ -9,7 +9,7 @@
 #
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
 sed -i 's/192.168.1.1/192.168.2.88/g' package/base-files/files/bin/config_generate
-#sed -i '5i uci set system.@system[0].hostname=DinG' package/lean/default-settings/files/zzz-default-settings
+sed -i '5i uci set system.@system[0].hostname=DinG' package/lean/default-settings/files/zzz-default-settings
 # 日期
 sed -i 's/os.date(/&"%Y-%m-%d %H:%M:%S"/' package/lean/autocore/files/x86/index.htm
 # 关闭串口跑码
