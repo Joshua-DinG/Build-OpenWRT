@@ -30,4 +30,4 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git ./feeds/luc
 svn co https://github.com/Joshua-DinG/openwrt/trunk/argon/video/default ./feeds/luci/themes/luci-theme-argon-mod/htdocs/luci-static/argon/background/
 rm -rf ./feeds/luci/themes/luci-theme-argon-mod/htdocs/luci-static/argon/background/.svn/
 # 临时
-sed -i s/5.15/6.1.Plus/g  target/linux/x86/Makefile
+#sed -i s/5.15/6.1/g  target/linux/x86/Makefile
