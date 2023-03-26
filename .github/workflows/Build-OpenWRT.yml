@@ -62,6 +62,7 @@ jobs:
         cd ./lede 
         sed -i '1i src-git haibo $MY_URL' $FEEDS_CONF
         sed -i '5i uci set system.@system[0].hostname=$HOST_NAME' package/lean/default-settings/files/zzz-default-settings
+        cat feeds.conf.default
         
     - name: Update Feeds01
       run: |
