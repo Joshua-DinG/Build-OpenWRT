@@ -7,7 +7,7 @@
 | luci-app-adguardhome | AdGuard Home 去广告 | 12 | 12 |
 | luci-app-advanced | 系统高级设置 | 12 | 12 |
 
-
+### 集成插件
 | 反向代理SSL加密地址  |VPN SSL+TLS+私有IP隧道 | | 反向代理SSL地址  |VPN SSL+TLS+mTLS+私有IP隧道 |
 |:---------------:|---------|-|:---------------:|--------------|
 | SSL.TLS.CM:62001 | 192.168.88.88:62001 | | SSL.TLS.CM:62001 | 192.168.88.88:62005 |
