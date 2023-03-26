@@ -5,7 +5,7 @@
 
 
 
-<div style="margin: 0 auto; max-width: 1000px;">
+<div style="width: 100%;">
     <table>
 	<caption><b>集成插件</b></caption>
 	<tr>
