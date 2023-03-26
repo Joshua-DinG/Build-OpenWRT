@@ -5,7 +5,7 @@
 
 
 
-<div style=width = "100%" height = "50%" div align=center>
+<div style=width = "100%" height = "50%" >
     <table>
 	<caption><b>集成插件</b></caption>
 	<tr>
