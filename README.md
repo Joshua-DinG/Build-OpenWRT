@@ -8,10 +8,9 @@
 | luci-app-aliddns | 阿里云 DDNS 插件 | | luci-app-eqos | 	IP 限速插件 |
 | luci-app-aliyundrive-webdav | 阿里云盘 WebDAV 服务 | | luci-app-onliner | 在线用户 |
 | luci-app-bypass | Bypass 科学上网插件 | | luci-app-passwall | PassWall 科学上网插件 |
-| luci-app-quickstart | Bypass 科学上网插件 | | luci-app-passwall | PassWall 科学上网插件 |
 | luci-app-quickstart | iStore 网络向导 | |   |   |
-| luci-app-istorex | iStore 首页 | |   | PassWall 科学上网插件 |
-| luci-app-store | iStore 应用商店 | |   | PassWall 科学上网插件 |
+| luci-app-istorex | iStore 首页 | |   |   |
+| luci-app-store | iStore 应用商店 | |   |   |
 
 
 
