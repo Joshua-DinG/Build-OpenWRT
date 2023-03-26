@@ -6,7 +6,7 @@
 
 
 
-<table width="100%" height="20%">
+<table>
 <caption><b>集成插件</b></caption>
 <tr>
 	<th rowspan="">插件名称</th>
