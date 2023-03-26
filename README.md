@@ -6,7 +6,6 @@
 
 
 <div style="overflow-x:auto;">
-
     <table>
 	<caption><b>集成插件</b></caption>
 	<tr>
