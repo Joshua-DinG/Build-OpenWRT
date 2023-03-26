@@ -64,7 +64,7 @@ jobs:
         sed -i '5i uci set system.@system[0].hostname=$HOST_NAME' package/lean/default-settings/files/zzz-default-settings
         
     - name: Update Feeds01
-      run:  |
+      run: |
         cd ./lede && ./scripts/feeds update -a && ./scripts/feeds install -a
 
     - name: Update Plugins
