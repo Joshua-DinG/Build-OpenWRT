@@ -6,7 +6,7 @@
 
 
 <div style="margin: 0 auto; max-width: 1000px;">
-    <table style="border-collapse: collapse;">
+    <table>
 	<caption><b>集成插件</b></caption>
 	<tr>
 		<th rowspan="">插件名称</th>
