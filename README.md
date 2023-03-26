@@ -5,7 +5,7 @@
 
 
 
-
+<div style="width: 100%;">
 <table>
     <caption><b>集成插件</b></caption>
 	<tr>
@@ -44,6 +44,7 @@
 		  <td>Hello World 科学上网插件</td>
 	</tr>
 </table>
+</div>
 
 
 
