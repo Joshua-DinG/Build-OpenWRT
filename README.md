@@ -5,7 +5,7 @@
 
 
 
-<div style="overflow-x:auto;">
+<div style="margin: 0 auto; max-width: 1000px;">
     <table>
 	<caption><b>集成插件</b></caption>
 	<tr>
