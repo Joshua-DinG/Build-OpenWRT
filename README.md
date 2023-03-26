@@ -44,7 +44,6 @@
 		<td>Hello World 科学上网插件</td>
 	</tr>
     </table>
-</div>
 
 
 
