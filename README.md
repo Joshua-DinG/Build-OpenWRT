@@ -16,46 +16,41 @@
 <table>
     <caption><b>网络状态指示引脚的工作状态</b></caption>
 	<tr>
-     <td rowspan="">插件名称</td>
-	<td rowspan="">插件说明</td>
-	<td rowspan="">————</td>
-	<td rowspan="">插件名称</td>
-	<td rowspan="">插件说明</td>
+			 <th rowspan="">插件名称</th>
+			<th rowspan="">插件说明</th>
+			<th rowspan=""> </th>
+			<th rowspan="">插件名称</th>
+			<th rowspan="">插件说明</th>
 	</tr>
 	<tr>
-	    <td>luci-app-store</td>
-	    <td>iStore 应用商店</td>
-<td>————</td>
-        <td>luci-app-adguardhome</td>
-       <td>AdGuard Home 去广告</td>
+			<td>luci-app-store</td>
+			<td>iStore 应用商店</td>
+		   <td>————</td>
+			<td>luci-app-adguardhome</td>
+		   <td>AdGuard Home 去广告</td>
 	</tr>
 	<tr>
-	    <td>luci-app-istorex</td>
-	    <td>iStore 首页</td>
-<td>————</td>
-        <td>luci-app-aliddns</td>
-       <td>阿里云 DDNS 插件</td>
+			<td>luci-app-istorex</td>
+			<td>iStore 首页</td>
+			<td>————</td>
+			<td>luci-app-aliddns</td>
+		   <td>阿里云 DDNS 插件</td>
 	</tr>
 	<tr>
-	    <td>luci-app-quickstart</td>
-	    <td>iStore 网络向导</td>
-<td>————</td>
-        <td>luci-app-dockerman</td>
-       <td>Docker 图形化插件</td>
+			<td>luci-app-quickstart</td>
+			<td>iStore 网络向导</td>
+			<td>————</td>
+			<td>luci-app-dockerman</td>
+		   <td>Docker 图形化插件</td>
 	</tr>
 	<tr>
-  <td>luci-app-passwall</td>
-  <td>PassWall 科学上网插件</td>
-	    <td>————</td>
-	    <td>luci-app-onliner</td>  
-<td>在线用户</td>
+		  <td>luci-app-passwall</td>
+		  <td>PassWall 科学上网插件</td>
+		  <td>————</td>
+		  <td>luci-app-onliner</td>  
+		  <td>在线用户</td>
 	</tr>
-	<tr>
-
-	</tr>
-
 </table>
-
 
 
 
