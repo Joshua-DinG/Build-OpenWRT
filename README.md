@@ -5,7 +5,19 @@
 
 
 
-<div style="width: 100%;">
+<style>
+   table {
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;
+  }
+  td, th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+ </style>
+
     <table>
 	<caption><b>集成插件</b></caption>
 	<tr>
