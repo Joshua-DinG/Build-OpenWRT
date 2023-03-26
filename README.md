@@ -48,6 +48,5 @@
 
 
 
-![](https://cdn.jsdelivr.net/gh/Dtyyyyyy/PicGoIMG/img/68747470733a2f2f7777772e73616665776562636e2e636f6d2f696d672f77616c6c2d6d696e2e706e67.png)
 
 <img src="https://cdn.jsdelivr.net/gh/Dtyyyyyy/PicGoIMG/img/68747470733a2f2f7777772e73616665776562636e2e636f6d2f696d672f77616c6c2d6d696e2e706e67.png" width = "100%" height = "100%" div align=center />
