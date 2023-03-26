@@ -60,7 +60,7 @@ jobs:
       run: |
         git clone --depth=1 --single-branch $REPO_URL
         cd ./lede 
-        sed -i '1i src-git MY-packages $MY_URL' $FEEDS_CONF
+        sed -i '1i src-git haibo $MY_URL' $FEEDS_CONF
         sed -i '5i uci set system.@system[0].hostname=$HOST_NAME' package/lean/default-settings/files/zzz-default-settings
         
     - name: Update Feeds01
