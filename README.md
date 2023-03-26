@@ -5,8 +5,8 @@
 
 
 
-<div style="width: max-content; height: 20%; text-align: center; font-size: 14px;">
-    <table>
+<div style="width: 50%; height: 20%; text-align: center;">
+    <table width="100%" height="100%">
 	<caption><b>集成插件</b></caption>
 	<tr>
 		<th rowspan="">插件名称</th>
