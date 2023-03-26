@@ -5,7 +5,7 @@
 
 
 
-<div style="width: 50%; height: 20%; text-align: center;">
+<div style="width: 500%; height: 20%; text-align: center;">
   <style>
     table {
       font-size: 14px;
