@@ -95,15 +95,19 @@ jobs:
     - name: Release Firmware
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: "$DEVICE_NAME_Firmware_${{env.BUILD_DATE}}"
+        tag_name: OpenWRT_Firmware_${{env.BUILD_DATE}}
         files: ./lede/bin/targets/*/*/*.*
         body: |
-          "OpenWrt $DEVICE_NAME 固件 ${{ env.DEVICE_NAME }}"
+          OpenWrt X86 固件 ${{ env.DEVICE_NAME }}
           * 固件信息
-          Default IP: 192.168.2.88
-          Default username: root
-          Default password: 
-
+          内核版本:6.1.21
+          Default: IP: 192.168.2.88
+          Default: username: root
+          Default: password: password
+          集成了：Argon主题 iStore 应用商店 iStore 首页 iStore 网络向导
+          上网插件：OpenClash 小猫咪科学上网插件  SSR Plus+ 科学上网插件 
+                    Hello World 科学上网插件 PassWall 科学上网插件 
+          也集成了 NANO编辑器
     - name: Delete Old Releases
       uses: dev-drprasad/delete-older-releases@v0.2.1
       with:
