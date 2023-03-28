@@ -90,13 +90,17 @@ jobs:
         du -h --max-depth=1 ./build_dir
         echo "======================="
         du -h --max-depth=1 ./bin
-        echo "======================="        
-
+        echo "=======================" 
+        
+    - name: Compile Firmware
+      run: |
+        find ./lede/bin/targets/ -type f ! \( -name "*.bin" -o -name "*.img.gz" -o -name "*.vmdk" \) -delete
+        
     - name: Release Firmware
       uses: softprops/action-gh-release@v1
       with:
         tag_name: OpenWRT_Firmware_${{env.BUILD_DATE}}
-        files: ./lede/bin/targets/*/*/*.*
+        files: ./lede/bin/targets/*/*/(*.bin|*.img.gz|*.vmdk|*.config)
         body: |
           LEDE OpenWrt X86固件 ${{ env.DEVICE_NAME }}
           * 【Default】内核版本: 6.1.21
