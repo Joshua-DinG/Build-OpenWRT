@@ -63,15 +63,15 @@ jobs:
         sed -i "1i src-git haibo $MY_URL" $FEEDS_CONF
         cat feeds.conf.default
         
-    - name: Update Feeds01
+    - name: update install Feeds
       run: |
         cd ./lede && ./scripts/feeds update -a && ./scripts/feeds install -a
 
-    - name: Update Plugins
+    - name: Load Custom Configuration
       run: |
         chmod +x $DIY_P1_SH; cd ./lede; $GITHUB_WORKSPACE/$DIY_P1_SH
 
-    - name: Custom Settings
+    - name: Load custom build
       run: |
         cd ./lede && rm -rf ./tmp && rm -rf ./.config*
         cat $GITHUB_WORKSPACE/$CONFIG_FILE > .config
@@ -92,15 +92,16 @@ jobs:
         du -h --max-depth=1 ./bin
         echo "=======================" 
         
-    - name: Compile Firmware
+    - name: file organization
       run: |
         find ./lede/bin/targets/ -type f ! \( -name "*.bin" -o -name "*.img.gz" -o -name "*.vmdk" \) -delete
+        cp -rf ./lede/.config ./lede/bin/targets/config.buildinfo
         
     - name: Release Firmware
       uses: softprops/action-gh-release@v1
       with:
         tag_name: OpenWRT_Firmware_${{env.BUILD_DATE}}
-        files: ./lede/bin/targets/*/*/(*.bin|*.img.gz|*.vmdk|*.config)
+        files: ./lede/bin/targets/*/*/(*.bin|*.img.gz|*.vmdk|*.buildinfo)
         body: |
           LEDE OpenWrt X86固件 ${{ env.DEVICE_NAME }}
           * 【Default】内核版本: 6.1.21
