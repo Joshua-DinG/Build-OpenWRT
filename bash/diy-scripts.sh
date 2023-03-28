@@ -10,7 +10,7 @@
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
 sed -i 's/192.168.1.1/192.168.2.88/g' package/base-files/files/bin/config_generate
 sed -i '5i uci set system.@system[0].hostname=DinG' package/lean/default-settings/files/zzz-default-settings
-# 日期
+
 sed -i 's/os.date(/&"%Y-%m-%d %H:%M:%S"/' package/lean/autocore/files/x86/index.htm
 # 关闭串口跑码
 #sed -i 's/console=tty0//g'  target/linux/x86/image/Makefile
@@ -21,13 +21,14 @@ sed -i "s/Year/$(TZ=':Asia/Shanghai' date '+%Y')/g" package/base-files/files/etc
 #sed -i '/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./ d' package/lean/default-settings/files/zzz-default-settings
 # ID
 #sed -i "s/DISTRIB_REVISION='R.*.*.[0-9]/& Compiled by Jason/" package/lean/default-settings/files/zzz-default-settings
-# 添加新主题  
+rm -rf ./package/base-files/files/etc/banner
 rm -rf ./feeds/luci/themes/luci-theme-argon
 rm -rf ./feeds/haibo/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git ./package/luci-theme-argon
 # git clone https://github.com/jerrykuku/luci-app-argon-config.git ./package/lean/luci-app-argon-config
-# 主题背景
-
+       
+svn co https://github.com/Joshua-DinG/Build-OpenWRT/trunk/firmware/banner ./package/base-files/files/etc/
+rm -rf ./package/base-files/files/etc/.svn/
 svn co https://github.com/Joshua-DinG/Build-OpenWRT/trunk/argon/video/default ./package/luci-theme-argon/htdocs/luci-static/argon/background/
 rm -rf ./package/luci-theme-argon/htdocs/luci-static/argon/background/.svn/
 # 临时
