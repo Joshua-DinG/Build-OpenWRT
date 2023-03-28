@@ -98,16 +98,15 @@ jobs:
         tag_name: OpenWRT_Firmware_${{env.BUILD_DATE}}
         files: ./lede/bin/targets/*/*/*.*
         body: |
-          OpenWrt X86 固件 ${{ env.DEVICE_NAME }}
-          * 固件信息
-          内核版本:6.1.21
-          Default: IP: 192.168.2.88
-          Default: username: root
-          Default: password: password
-          集成了：Argon主题 iStore 应用商店 iStore 首页 iStore 网络向导
-          上网插件：OpenClash 小猫咪科学上网插件  SSR Plus+ 科学上网插件 
-                    Hello World 科学上网插件 PassWall 科学上网插件 
-          也集成了 NANO编辑器
+          LEDE OpenWrt X86固件 ${{ env.DEVICE_NAME }}
+          * 【Default】内核版本: 6.1.21
+          * 【Default】主题: Argon
+          * 【Default】IP: 192.168.2.88
+          * 【Default】username: root
+          * 【Default】password: password
+          * 【Default】增加: iStore应用商店丨iStore首页丨iStore网络向导 
+          * 【Default】科学网插件: OpenClash小猫咪科学上网丨PassWall科学上网丨丨Hello World科学上网丨Bypass科学上网丨SSR Plus+科学上网
+          * 【Default】增加: NANO编辑器
     - name: Delete Old Releases
       uses: dev-drprasad/delete-older-releases@v0.2.1
       with:
