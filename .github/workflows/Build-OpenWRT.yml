@@ -102,7 +102,7 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         tag_name: OpenWRT_Firmware_${{env.BUILD_DATE}}
-        files: ./lede/bin/targets/(*.bin|*.img.gz|*.vmdk|*.buildinfo)
+        files: ./lede/bin/targets/*/*/*.*
         body: |
           LEDE OpenWrt X86固件 ${{ env.DEVICE_NAME }}
           * 【Default】内核版本: 6.1.21
