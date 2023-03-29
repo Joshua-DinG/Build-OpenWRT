@@ -95,7 +95,8 @@ jobs:
     - name: file organization
       run: |
         find ./lede/bin/targets/ -type f ! \( -name "*.bin" -o -name "*.img.gz" -o -name "*.vmdk" \) -delete
-        cp -rf ./lede/.config ./lede/bin/targets/config.buildinfo
+        rm -rf ./lede/bin/targets/*/*/packages
+        cp -rf ./lede/.config ./lede/bin/targets/*/*/config.buildinfo
         tree ./lede/bin/targets/
         
     - name: Release Firmware
