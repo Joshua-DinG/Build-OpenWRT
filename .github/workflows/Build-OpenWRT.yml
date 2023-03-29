@@ -96,14 +96,14 @@ jobs:
       run: |
         find ./lede/bin/targets/ -type f ! \( -name "*.bin" -o -name "*.img.gz" -o -name "*.vmdk" \) -delete
         rm -rf ./lede/bin/targets/*/*/packages
-        cp -rf ./lede/.config ./lede/bin/targets/*/*/config.buildinfo
+        cp -rf ./lede/.config ./lede/bin/targets/config.buildinfo
         tree ./lede/bin/targets/
         
     - name: Release Firmware
       uses: softprops/action-gh-release@v1
       with:
         tag_name: OpenWRT_Firmware_${{env.BUILD_DATE}}
-        files: ./lede/bin/targets/*/*/*.*
+        files: ./lede/bin/targets/*
         body: |
           LEDE OpenWrt X86固件 ${{ env.DEVICE_NAME }}
           * 【Default】内核版本: 6.1.21
