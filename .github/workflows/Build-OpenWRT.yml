@@ -95,7 +95,7 @@ jobs:
     - name: file organization
       run: |
         find ./lede/bin/targets/ -type f ! \( -name "*.bin" -o -name "*.img.gz" -o -name "*.vmdk" \) -delete
-        rm -rf ./lede/bin/targets/*/*/packages
+        find ./lede/bin/targets/* -type f -name "*.*" -print0 | xargs -0 -I{} mv {} ./lede/bin/targets/
         cp -rf ./lede/.config ./lede/bin/targets/config.buildinfo
         tree ./lede/bin/targets/
         
@@ -103,7 +103,7 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         tag_name: OpenWRT_Firmware_${{env.BUILD_DATE}}
-        files: ./lede/bin/targets/*
+        files: ./lede/bin/targets/*.*
         body: |
           LEDE OpenWrt X86固件 ${{ env.DEVICE_NAME }}
           * 【Default】内核版本: 6.1.21
@@ -112,8 +112,9 @@ jobs:
           * 【Default】username: root
           * 【Default】password: password
           * 【Default】增加: iStore应用商店丨iStore首页丨iStore网络向导 
-          * 【Default】科学网插件: OpenClash小猫咪科学上网丨PassWall科学上网丨丨Hello World科学上网丨Bypass科学上网丨SSR Plus+科学上网
-          * 【Default】增加: NANO编辑器
+          * 【Default】科学网插件: PassWall科学上网丨丨Hello World科学上网
+          * 【Default】科学网插件:OpenClash小猫咪科学上网丨SSR Plus+科学上网丨Bypass科学上网
+          * 【Default】增加: NANO编辑器丨SSH登录，输入：quickstart (或者 qu + tab 补全)可以修改IP,安装到其他盘,重置
     - name: Delete Old Releases
       uses: dev-drprasad/delete-older-releases@v0.2.1
       with:
