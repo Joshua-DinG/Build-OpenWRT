@@ -114,7 +114,7 @@ jobs:
           * 【Default】增加: iStore应用商店丨iStore首页丨iStore网络向导 
           * 【Default】科学网插件: PassWall科学上网丨丨Hello World科学上网
           * 【Default】科学网插件:OpenClash小猫咪科学上网丨SSR Plus+科学上网丨Bypass科学上网
-          * 【Default】增加: NANO编辑器丨SSH登录，输入：quickstart (或者 qu + tab 补全)可以修改IP,安装到其他盘,重置
+          * 【Default】增加: NANO编辑器
     - name: Delete Old Releases
       uses: dev-drprasad/delete-older-releases@v0.2.1
       with:
