@@ -86,12 +86,12 @@ jobs:
 
     - name: Load Custom Configuration
       run: |
-        chmod +x $DIY_P1_SH; cd ./lede; $GITHUB_WORKSPACE/$DIY_P1_SH
+        chmod +x $DIY_P1_SH; cd ./lede; $GITHUB_WORKSPACE/$DIY_P1_SH diy
 
     - name: Load custom build
       run: |
-        cd ./lede && rm -rf ./tmp && rm -rf ./.config*
-        cat $GITHUB_WORKSPACE/$CONFIG_FILE > .config
+        rm -rf ./lede/tmp && rm -rf ./lede/.config*
+        sh ${{ github.workspace }}/$DIY_P1_SH ${{ github.event.inputs.device }} ${{ github.event.inputs.ui }}
         make defconfig
 
     - name: Download Packages
