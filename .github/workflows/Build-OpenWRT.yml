@@ -92,7 +92,7 @@ jobs:
       run: |
         rm -rf ./lede/tmp && rm -rf ./lede/.config*
         sh ${{ github.workspace }}/$DIY_P1_SH ${{ github.event.inputs.device }} ${{ github.event.inputs.ui }}
-        make defconfig
+        cd ./lede && make defconfig
 
     - name: Download Packages
       run: cd ./lede && make -j16 download
