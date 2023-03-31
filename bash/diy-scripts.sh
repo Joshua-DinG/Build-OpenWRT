@@ -4,11 +4,11 @@ device=$1
 ui=$2
 diy=$3
 if [ "$device" = "Build-x86" ]; then
-  echo "$(cat .firmware/X86 .firmware/Generic)" >> ./lede/.config
+  echo "$(cat ./firmware/X86 ./firmware/Generic)" >> ./lede/.config
 elif [ "$device" = "Build-R2S" ]; then
-   echo "$(cat .firmware/R2S .firmware/Generic)" >> ./lede/.config
+   echo "$(cat ./firmware/R2S ./firmware/Generic)" >> ./lede/.config
 elif [ "$device" = "Build-R4S" ]; then
-  echo "$(cat .firmware/R4S .firmware/Generic)" >> ./lede/.config
+  echo "$(cat ./firmware/R4S ./firmware/Generic)" >> ./lede/.config
 fi
 
 if [ "$ui" = "true" ]; then
