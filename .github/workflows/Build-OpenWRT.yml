@@ -106,7 +106,7 @@ jobs:
         tag_name: OpenWRT_Firmware_${{env.BUILD_DATE}}
         files: ./lede/bin/targets/*.*
         body: |
-          LEDE OpenWrt X86固件 ${{ env.DEVICE_NAME }}
+          LEDE OpenWrt ${{ env.DEVICE_NAME }} 固件 
           * 【Default】内核版本: 6.1.21
           * 【Default】主题: Argon
           * 【Default】IP: 192.168.2.88
