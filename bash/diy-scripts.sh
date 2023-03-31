@@ -4,20 +4,19 @@ device=$1
 ui=$2
 diy=$3
 if [ "$device" = "Build-x86" ]; then
-  echo "$(cat ./Config/X86 ./Config/Generic)" >> ./lede/.config
+  echo "$(cat .firmware/X86 .firmware/Generic)" >> ./lede/.config
 elif [ "$device" = "Build-R2S" ]; then
-  cat $GITHUB_WORKSPACE/Config/R2S $GITHUB_WORKSPACE/Config/Generic >> ./lede/.config
+   echo "$(cat .firmware/R2S .firmware/Generic)" >> ./lede/.config
 elif [ "$device" = "Build-R4S" ]; then
-  cat $GITHUB_WORKSPACE/Config/R4S $GITHUB_WORKSPACE/Config/Generic >> ./lede/.config
-elif [ "$device" = "Build-GL.iNET-MT1300" ]; then
-  cat $GITHUB_WORKSPACE/Config/GL.iNET-MT1300 $GITHUB_WORKSPACE/Config/Generic >> ./lede/.config
+  echo "$(cat .firmware/R4S .firmware/Generic)" >> ./lede/.config
 fi
 
 if [ "$ui" = "true" ]; then
-  sed -i s/5.15/6.1/g  target/linux/x86/Makefile
+  sed -i s/5.15/6.1/g  ./lede/target/linux/x86/Makefile
 fi
 
 if [ "$diy" = "diy" ]; then
+cat << EOF | sh
   # Uncomment a feed source
   ##sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
   #sed -i '1i src-git haibo https://github.com/haiibo/openwrt-packages' feeds.conf.default
@@ -51,4 +50,4 @@ if [ "$diy" = "diy" ]; then
   svn co https://github.com/Joshua-DinG/Build-OpenWRT/trunk/argon/video/default ./package/luci-theme-argon/htdocs/luci-static/argon/background/
   rm -rf ./package/luci-theme-argon/htdocs/luci-static/argon/background/.svn/
   # 临时
-fi
+EOF
