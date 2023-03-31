@@ -1,5 +1,23 @@
-#!/bin/bash
+#!/bin/sh
 
+device=$1
+ui=$2
+
+if [ "$device" = "Build-x86" ]; then
+  echo "$(cat ./Config/X86 ./Config/Generic)" >> ./lede/.config
+elif [ "$device" = "Build-R2S" ]; then
+  cat $GITHUB_WORKSPACE/Config/R2S $GITHUB_WORKSPACE/Config/Generic >> ./lede/.config
+elif [ "$device" = "Build-R4S" ]; then
+  cat $GITHUB_WORKSPACE/Config/R4S $GITHUB_WORKSPACE/Config/Generic >> ./lede/.config
+elif [ "$device" = "Build-GL.iNET-MT1300" ]; then
+  cat $GITHUB_WORKSPACE/Config/GL.iNET-MT1300 $GITHUB_WORKSPACE/Config/Generic >> ./lede/.config
+fi
+
+if [ "$ui" = "true" ]; then
+  echo "$(cat ./Config/X86 ./Config/Generic)" >> ./lede/123456.config
+fi
+
+$3
 # Uncomment a feed source
 ##sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 #sed -i '1i src-git haibo https://github.com/haiibo/openwrt-packages' feeds.conf.default
