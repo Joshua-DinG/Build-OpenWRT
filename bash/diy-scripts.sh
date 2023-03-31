@@ -51,3 +51,4 @@ cat << EOF | sh
   rm -rf ./package/luci-theme-argon/htdocs/luci-static/argon/background/.svn/
   # 临时
 EOF
+fi
