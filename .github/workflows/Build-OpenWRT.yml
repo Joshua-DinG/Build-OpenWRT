@@ -8,6 +8,22 @@ name: Build_OpenWRT
 
 on:
   workflow_dispatch:
+    inputs:
+      device:
+        description: '选择需要编译的设备'     
+        required: true
+        default: 'target_wlan_ap-gl-ax1800' 
+        type: choice
+        options:
+        - Build-x86
+        - Build-R2S
+        - Build-R4S
+        - Build-GL.iNET-MT1300
+        
+      ui:
+        description: '是否启用6.1内核'
+        required: false
+        type: boolean
 
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
