@@ -63,7 +63,6 @@ jobs:
         sudo -E apt update
         sudo -E apt -y purge $(curl -sSL https://github.com/Joshua-DinG/openwrt/raw/main/depends-ubuntu | sed -n '2p' | tr ' ' '\n')
         sudo -E apt -y full-upgrade
-        sudo -E apt -y install $(sed -n '3p' ${{ github.workspace }}/depends-ubuntu)
         sudo -E apt -y install $(curl -sSL https://github.com/Joshua-DinG/openwrt/raw/main/depends-ubuntu | sed -n '3p' | tr ' ' '\n')
         sudo -E systemctl daemon-reload
         sudo -E apt -y autoremove --purge
