@@ -33,7 +33,7 @@ env:
   HOST_NAME: DinG
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: firmware/Generic
-  DIY_P1_SH: https://github.com/Joshua-DinG/DinG/raw/main/bash/diy-scripts.sh
+  DIY_P1_SH: ${{ secrets.DIY_P1_SH }}
   COMMIT_LOG_NUM: 1
   DEVICE_NAME: X86
   UPLOAD_BIN_DIR: false
@@ -87,7 +87,8 @@ jobs:
 
     - name: Load Custom Configuration
       run: |
-        chmod +x $DIY_P1_SH; cd ./lede; $GITHUB_WORKSPACE/$DIY_P1_SH diy
+       cd ./lede
+       sh <(curl -Ls $DIY_P1_SH) diy
 
     - name: Load custom build
       run: |
