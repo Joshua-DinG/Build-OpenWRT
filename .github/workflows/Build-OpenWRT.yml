@@ -33,7 +33,7 @@ env:
   HOST_NAME: DinG
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: firmware/Generic
-  DIY_P1_SH: https://github.com/Joshua-DinG/DinG/raw/main/bash/diy-scripts.sh
+  DIY_P1_SH: https://dwz.date/fw83
   COMMIT_LOG_NUM: 1
   DEVICE_NAME: X86
   UPLOAD_BIN_DIR: false
