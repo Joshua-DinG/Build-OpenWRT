@@ -58,12 +58,12 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
       run: |
         docker rmi `docker images -q`
-        sudo -E rm -rf $(sed -n '1p' $GITHUB_WORKSPACE/depends-ubuntu)
+        sudo -E rm -rf $(sed -n '1p' ${{ github.workspace }}/depends-ubuntu)
         sudo -E apt-mark hold grub-efi-amd64-signed
         sudo -E apt update
-        sudo -E apt -y purge $(sed -n '2p' $GITHUB_WORKSPACE/depends-ubuntu)
+        sudo -E apt -y purge $(sed -n '2p' ${{ github.workspace }}/depends-ubuntu)
         sudo -E apt -y full-upgrade
-        sudo -E apt -y install $(sed -n '3p' $GITHUB_WORKSPACE/depends-ubuntu)
+        sudo -E apt -y install $(sed -n '3p' ${{ github.workspace }}/depends-ubuntu)
         sudo -E apt -y autoremove --purge
         sudo -E apt clean
         sudo -E apt -y autoclean
@@ -79,6 +79,7 @@ jobs:
         cd ./lede 
         sed -i "1i src-git haibo $MY_URL" $FEEDS_CONF
         cat feeds.conf.default
+        tree
         
     - name: update install Feeds
       run: |
