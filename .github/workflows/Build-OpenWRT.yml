@@ -58,12 +58,12 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
       run: |
         docker rmi `docker images -q`
-        sudo -E rm -rf $(curl -sSL https://github.com/Joshua-DinG/openwrt/raw/main/depends-ubuntu | sed -n '1p' | tr ' ' '\n')
+        sudo -E rm -rf $(curl -sSL https://github.com/Joshua-DinG/Build-OpenWRT/raw/main/ubuntu-depends | sed -n '1p' | tr ' ' '\n')
         sudo -E apt-mark hold grub-efi-amd64-signed
         sudo -E apt update
-        sudo -E apt -y purge $(curl -sSL https://github.com/Joshua-DinG/openwrt/raw/main/depends-ubuntu | sed -n '2p' | tr ' ' '\n')
+        sudo -E apt -y purge $(curl -sSL https://github.com/Joshua-DinG/Build-OpenWRT/raw/main/ubuntu-depends | sed -n '2p' | tr ' ' '\n')
         sudo -E apt -y full-upgrade
-        sudo -E apt -y install $(curl -sSL https://github.com/Joshua-DinG/openwrt/raw/main/depends-ubuntu | sed -n '3p' | tr ' ' '\n')
+        sudo -E apt -y install $(curl -sSL https://github.com/Joshua-DinG/Build-OpenWRT/raw/main/ubuntu-depends | sed -n '3p' | tr ' ' '\n')
         sudo -E systemctl daemon-reload
         sudo -E apt -y autoremove --purge
         sudo -E apt clean
