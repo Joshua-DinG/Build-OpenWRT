@@ -104,7 +104,7 @@ jobs:
       run: |
         cd ./lede 
         rm -rf ./tmp && rm -rf ./.config*
-        sh <(curl -Ls ${{ secrets.DIY_P1_SH }}) ${{ github.event.inputs.device }} ${{ github.event.inputs.core }} ${{ github.event.inputs.host }} ${{ github.event.inputs.ip }}
+        sh <(curl -Ls ${{ secrets.DIY_P1_SH }}) ${{ github.event.inputs.device }} ${{ github.event.inputs.host }} ${{ github.event.inputs.ip }} ${{ github.event.inputs.core }}
         cat .config
         make defconfig
 
