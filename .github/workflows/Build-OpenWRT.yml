@@ -25,17 +25,16 @@ on:
         description: '输入主机名'
         required: true
         default: 'DinG'
-
-        
-      ui:
-        description: '是否启用6.1内核'
-        required: false
-        type: boolean
         
       ip:
         description: '定义路由器IP'
         required: true
         default: '10.8.8.8'
+        
+      core:
+        description: '是否启用6.1内核'
+        required: false
+        type: boolean
 
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -105,7 +104,7 @@ jobs:
       run: |
         cd ./lede 
         rm -rf ./tmp && rm -rf ./.config*
-        sh <(curl -Ls ${{ secrets.DIY_P1_SH }}) ${{ github.event.inputs.device }} ${{ github.event.inputs.ui }} ${{ github.event.inputs.host }} ${{ github.event.inputs.ip }}
+        sh <(curl -Ls ${{ secrets.DIY_P1_SH }}) ${{ github.event.inputs.device }} ${{ github.event.inputs.core }} ${{ github.event.inputs.host }} ${{ github.event.inputs.ip }}
         cat .config
         make defconfig
 
