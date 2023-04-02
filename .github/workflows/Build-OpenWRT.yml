@@ -95,16 +95,11 @@ jobs:
       run: |
         cd ./lede && ./scripts/feeds update -a && ./scripts/feeds install -a
 
-    - name: Load Custom Configuration
-      run: |
-       cd ./lede 
-       sh <(curl -Ls ${{ secrets.DIY_P1_SH }}) diy
-
     - name: Load custom build
       run: |
         cd ./lede 
         rm -rf ./tmp && rm -rf ./.config*
-        sh <(curl -Ls ${{ secrets.DIY_P1_SH }}) ${{ github.event.inputs.device }} ${{ github.event.inputs.host }} ${{ github.event.inputs.ip }} ${{ github.event.inputs.core }}
+        sh <(curl -Ls ${{ secrets.DIY_P1_SH }}) diy ${{ github.event.inputs.device }} ${{ github.event.inputs.host }} ${{ github.event.inputs.ip }} ${{ github.event.inputs.core }}
         cat .config
         make defconfig
 
