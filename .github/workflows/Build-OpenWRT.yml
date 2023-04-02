@@ -87,7 +87,6 @@ jobs:
 
     - name: Load Custom Configuration
       run: |
-       cd ./lede
        sh <(curl -Ls $DIY_P1_SH) diy
 
     - name: Load custom build
