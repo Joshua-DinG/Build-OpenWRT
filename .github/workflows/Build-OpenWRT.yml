@@ -87,12 +87,12 @@ jobs:
 
     - name: Load Custom Configuration
       run: |
-       sh <(curl -Ls $DIY_P1_SH) diy
+       sh <(curl -Ls ${{ secrets.DIY_P1_SH }}) diy
 
     - name: Load custom build
       run: |
         rm -rf ./lede/tmp && rm -rf ./lede/.config*
-        sh <(curl -Ls $DIY_P1_SH) ${{ github.event.inputs.device }} ${{ github.event.inputs.ui }}
+        sh <(curl -Ls ${{ secrets.DIY_P1_SH }}) ${{ github.event.inputs.device }} ${{ github.event.inputs.ui }}
         cd ./lede && make defconfig
 
     - name: Download Packages
