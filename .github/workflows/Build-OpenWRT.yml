@@ -12,7 +12,7 @@ on:
       device:
         description: '选择需要编译的设备'     
         required: true
-        default: 'target_wlan_ap-gl-ax1800' 
+        default: 'Build-x86' 
         type: choice
         options:
         - Build-x86
@@ -29,7 +29,7 @@ on:
       ip:
         description: '定义路由器IP'
         required: true
-        default: '10.8.8.8'
+        default: '10.0.0.1'
         
       core:
         description: '是否启用6.1内核'
@@ -99,7 +99,7 @@ jobs:
       run: |
         cd ./lede 
         rm -rf ./tmp && rm -rf ./.config*
-        sh $GITHUB_WORKSPACE/diy-scripts diy ${{ github.event.inputs.device }} ${{ github.event.inputs.host }} ${{ github.event.inputs.ip }} ${{ github.event.inputs.core }}
+        sh <(curl -Ls ${{ secrets.DIY_P1_SH }}) diy ${{ github.event.inputs.device }} ${{ github.event.inputs.host }} ${{ github.event.inputs.ip }} ${{ github.event.inputs.core }}
         cat .config
         make defconfig
 
