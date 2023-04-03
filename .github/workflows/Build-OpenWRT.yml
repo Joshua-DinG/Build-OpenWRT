@@ -132,9 +132,9 @@ jobs:
         files: ./lede/bin/targets/*.*
         body: |
           LEDE OpenWrt ${{ env.DEVICE_NAME }} 固件 
-          * 【Default】内核版本: 6.1.21
+          * 【Default】内核版本: 6.1.22 Plus
           * 【Default】主题: Argon
-          * 【Default】IP: 192.168.2.88
+          * 【Default】IP: ${{ github.event.inputs.ip }}
           * 【Default】username: root
           * 【Default】password: password
           * 【Default】增加: iStore应用商店丨iStore首页丨iStore网络向导 
