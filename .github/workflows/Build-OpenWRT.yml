@@ -131,7 +131,7 @@ jobs:
         tag_name: ${{env.BUILD_DATE}} OpenWRT ${{ env.DEVICE_NAME }} Plus版 
         files: ./lede/bin/targets/*.*
         body: |
-          OpenWrt ${{ env.DEVICE_NAME }} 固件信息 
+          固件信息 
           * 【Default】内核版本: 6.1.22 Plus
           * 【Default】主题: Argon
           * 【Default】IP: ${{ github.event.inputs.ip }}
