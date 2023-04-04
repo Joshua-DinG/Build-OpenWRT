@@ -39,7 +39,7 @@ on:
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
   REPO_URL: https://github.com/coolsnowwolf/lede
-  MY_URL: https://github.com/haiibo/openwrt-packages
+  MY_URL: https://github.com/NueXini/NueXini_Packages.git
   REPO_BRANCH: master
   HOST_NAME: DinG
   FEEDS_CONF: feeds.conf.default
