@@ -128,7 +128,7 @@ jobs:
     - name: Release Firmware
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: OpenWRT_Firmware_${{env.BUILD_DATE}}
+        tag_name: OpenWRT_Plus-x86-${{env.BUILD_DATE}}
         files: ./lede/bin/targets/*.*
         body: |
           LEDE OpenWrt ${{ env.DEVICE_NAME }} 固件 
