@@ -131,16 +131,16 @@ jobs:
         tag_name: ${{env.BUILD_DATE}} OpenWRT ${{ env.DEVICE_NAME }} Plus
         files: ./lede/bin/targets/*.*
         body: |
-          固件信息 
-          * 【Default】内核版本: 6.1.22 Plus版 
-          * 【Default】主题: Argon
-          * 【Default】IP: ${{ github.event.inputs.ip }}
-          * 【Default】username: root
-          * 【Default】password: password
-          * 【Default】增加: iStore应用商店丨iStore首页丨iStore网络向导 
-          * 【Default】科学网插件: PassWall科学上网丨丨Hello World科学上网
-          * 【Default】科学网插件:OpenClash小猫咪科学上网丨SSR Plus+科学上网丨Bypass科学上网
-          * 【Default】增加: NANO编辑器
+            固件信息 
+            * 【Default】内核版本: 6.1.22 Plus版 
+            * 【Default】主题: Argon
+            * 【Default】IP: ${{ github.event.inputs.ip }}
+            * 【Default】username: root
+            * 【Default】password: password
+            * 【Default】增加: iStore应用商店丨iStore首页丨iStore网络向导 
+            * 【Default】科学网插件: PassWall科学上网丨丨Hello World科学上网
+            * 【Default】科学网插件:OpenClash小猫咪科学上网丨SSR Plus+科学上网丨Bypass科学上网
+            * 【Default】增加: NANO编辑器
           
     - name: Delete Old Releases
       uses: dev-drprasad/delete-older-releases@v0.2.1
