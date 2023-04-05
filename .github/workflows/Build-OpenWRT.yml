@@ -128,10 +128,10 @@ jobs:
     - name: Release Firmware
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: ${{env.BUILD_DATE}} OpenWRT ${{ env.DEVICE_NAME }} Plus
-        files: ./lede/bin/targets/*.*
+        tag_name: ${{env.BUILD_DATE}}丨OpenWRT+Plus
+        files: ./lede/bin/targets/*
         body: |
-            固件信息 
+            ${{ env.DEVICE_NAME }} 固件信息  
             * 【Default】内核版本: 6.1.22 Plus版 
             * 【Default】主题: Argon
             * 【Default】IP: ${{ github.event.inputs.ip }}
