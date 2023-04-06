@@ -39,7 +39,8 @@ on:
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
   REPO_URL: https://github.com/coolsnowwolf/lede
-  MY_URL: https://github.com/NueXini/NueXini_Packages.git
+  MY_URL1: https://github.com/NueXini/NueXini_Packages.git
+  MY_URL2: https://github.com/kenzok8/small-package.git
   REPO_BRANCH: master
   HOST_NAME: DinG
   FEEDS_CONF: feeds.conf.default
@@ -87,7 +88,8 @@ jobs:
       run: |
         git clone --depth=1 --single-branch $REPO_URL
         cd ./lede 
-        sed -i "1i src-git haibo $MY_URL" $FEEDS_CONF
+        sed -i "1i src-git chajian1 $MY_URL1" $FEEDS_CONF
+        sed -i "1i src-git chajian2 $MY_URL2" $FEEDS_CONF
         cat feeds.conf.default
         tree
         
