@@ -89,7 +89,6 @@ jobs:
         git clone --depth=1 --single-branch $REPO_URL
         cd ./lede 
         sed -i "1i src-git chajian1 $MY_URL1" $FEEDS_CONF
-        git clone https://github.com/kenzok8/small-package package/small-package
         cat feeds.conf.default
         tree
         
