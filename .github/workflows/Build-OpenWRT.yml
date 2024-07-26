@@ -38,7 +38,8 @@ on:
 
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  #REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/Joshua-DinG/lede
   MY_URL1: https://github.com/NueXini/NueXini_Packages.git
   MY_URL2: https://github.com/kenzok8/small-package.git
   REPO_BRANCH: master
