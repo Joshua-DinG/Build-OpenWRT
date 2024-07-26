@@ -61,6 +61,11 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
+    - name: Set up Go 1.22.4
+      uses: actions/setup-go@v3
+      with:
+         go-version: 1.22.4
+    
     - name: Checkout OpenWRT
       uses: actions/checkout@v3 
 
