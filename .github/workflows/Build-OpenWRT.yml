@@ -94,7 +94,7 @@ jobs:
       run: |
         git clone --depth=1 --single-branch $REPO_URL
         cd ./lede 
-        sed -i "1i src-git chajian1 $MY_URL1" $FEEDS_CONF
+        sed -i "1i src-git chajian1 $MY_URL2" $FEEDS_CONF
         cat feeds.conf.default
         tree
         
