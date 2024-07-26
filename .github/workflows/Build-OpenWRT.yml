@@ -126,7 +126,7 @@ jobs:
         
     - name: file organization
       run: |
-        find ./lede/bin/targets/ -type f ! \( -name "*.bin" -o -name "*.img.gz" -o -name "*.vmdk" -o -name "*.tar.gz" \) -delete
+        find ./lede/bin/targets/ -type f ! \( -name "*.bin" -o -name "*.img.gz" -o -name "*.vmdk" -o -name "*.tar.gz" -o -name "*.iso" \) -delete
         find ./lede/bin/targets/* -type f -name "*.*" -print0 | xargs -0 -I{} mv {} ./lede/bin/targets/
         cp -rf ./lede/.config ./lede/bin/targets/config.buildinfo
         tree ./lede/bin/targets/
